@@ -2,13 +2,13 @@ package com.asashka.instagrama;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.asashka.instagrama.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_like:
                         getSupportFragmentManager()
                                 .beginTransaction()
-                                .replace(R.id.main_container, new LakeFragment())
+                                .replace(R.id.main_container, new LikeFragment())
                                 .commit();
                         break;
                     case R.id.menu_gallery:
