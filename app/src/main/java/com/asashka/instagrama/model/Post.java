@@ -8,10 +8,10 @@ public class Post {
     private String name;
     private Uri image;
 
-    public Post(String name) {
-        this.profile = profile;
+    public Post(Uri profileUri, String name, Uri imageUri) {
+        this.profile = profileUri;
         this.name = name;
-        this.image = image;
+        this.image = imageUri;
     }
 
     public Uri getProfile() {

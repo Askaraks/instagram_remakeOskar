@@ -23,8 +23,6 @@ public class HomeFragment extends Fragment{
     RecyclerView recyclerView;
     PostAdapter adapter;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -29,7 +29,6 @@ public class AddFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add, container, false);
     }
 
@@ -77,11 +76,12 @@ public class AddFragment extends Fragment {
 
         } );
         name.setOnClickListener(view3 ->{
+            Post post = new Post(profileUri, name.getText().toString(), imageUri);
 
 
         } );
         add.setOnClickListener(view4 ->{
-            Post post = new Post(name.getText().toString());
+            Post post = new Post(profileUri, name.getText().toString(), imageUri);
             ((MainActivity) getActivity()).post.add(post);
 
         } );

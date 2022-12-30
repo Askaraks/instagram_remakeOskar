@@ -23,6 +23,8 @@ public class GalleryFragment extends Fragment {
     EditText editText;
     Uri image;
     Uri image1;
+    Uri ProfileUri;
+    Uri imageUri;
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
@@ -48,7 +50,7 @@ public class GalleryFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Post post = new Post(editText.getText().toString());
+                Post post = new Post(ProfileUri, editText.getText().toString(), imageUri);
                 System.out.println(post);
             }
         });
