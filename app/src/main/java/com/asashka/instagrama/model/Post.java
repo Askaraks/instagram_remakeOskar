@@ -8,7 +8,7 @@ public class Post {
     private String name;
     private Uri image;
 
-    public Post(Uri profile, String name, Uri image) {
+    public Post(String name) {
         this.profile = profile;
         this.name = name;
         this.image = image;

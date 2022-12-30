@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.asashka.instagrama.MainActivity;
 import com.asashka.instagrama.R;
 import com.asashka.instagrama.model.Post;
 import com.bumptech.glide.Glide;
@@ -78,9 +78,11 @@ public class AddFragment extends Fragment {
         } );
         name.setOnClickListener(view3 ->{
 
+
         } );
         add.setOnClickListener(view4 ->{
-            Post post = new Post(profileUri,name.getText().toString(), imageUri);
+            Post post = new Post(name.getText().toString());
+            ((MainActivity) getActivity()).post.add(post);
 
         } );
 

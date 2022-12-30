@@ -9,12 +9,18 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.asashka.instagrama.home.HomeFragment;
+import com.asashka.instagrama.model.Post;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    public List<Post> posts;
     BottomNavigationView bottomNavigationView;
     FragmentContainerView fragmentContainerView;
+    public List<Post> post = new ArrayList<>();
 
     @SuppressLint("MissingInflatedId")
     @Override

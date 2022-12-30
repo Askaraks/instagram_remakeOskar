@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.asashka.instagrama.R;
 import com.asashka.instagrama.model.Post;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +24,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         this.posts = posts;
         notifyDataSetChanged();
     }
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -61,7 +60,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             name.setText(post.getName());
             profile.setImageURI(Uri.parse(String.valueOf(post.getProfile())));
             image.setImageURI(Uri.parse(String.valueOf(post.getImage())));
+            Glide.with(image).load(post.getImage()).into(image);
         }
     }
-
 }
